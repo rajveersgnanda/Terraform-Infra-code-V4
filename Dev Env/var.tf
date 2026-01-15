@@ -13,3 +13,21 @@ variable "stg" {
     account_tier = string
   }))
 }
+
+variable "vnet_map" {
+  type = map(object({
+    name          = string
+    location      = string
+    rg_name       = string
+    address_space = string
+  }))
+}
+
+variable "subnet_map" {
+  type = map(object({
+    name           = string
+    address_prefix = string
+  }))
+}
+
+
